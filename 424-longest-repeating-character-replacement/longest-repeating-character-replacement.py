@@ -6,8 +6,7 @@ class Solution:
         max1=0
         for  i in range(len(s)):
             count[s[i]]=count.get(s[i],0)+1
-            if max_freq<count[s[i]]:
-                max_freq=count[s[i]]
+            max_freq=max(max_freq,count[s[i]])
             while i-left+1>max_freq+k:
                 count[s[left]]-=1
                 left+=1
