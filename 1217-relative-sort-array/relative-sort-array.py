@@ -25,7 +25,6 @@ class Solution:
                     j+=1
                     k+=1
             return list1
-
         count1={}
         for num in arr1:
             count1[num]=count1.get(num,0)+1
