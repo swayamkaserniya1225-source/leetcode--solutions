@@ -1,7 +1,7 @@
 class Solution:
     def maximumProduct(self, nums: List[int]) -> int:
-        max1=max2=max3=float("-inf")
-        min1=min2=float("inf")
+        max1,max2,max3=float("-inf"),float("-inf"),float("-inf")
+        min1,min2=float("inf"),float("inf")
         for  num in nums:
             if num>max1:
                 max3=max2
