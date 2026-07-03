@@ -29,7 +29,7 @@ class Solution:
         res=[]
         while i<len(intervals):
             j=i+1
-            while j<len(intervals)and(intervals[j][0]<=intervals[i][1]or intervals[i][0]==intervals[j][0]):
+            while j<len(intervals)and(intervals[j][0]<=intervals[i][1]):
                 intervals[i]=[intervals[i][0],max(intervals[j][1],intervals[i][1])]
                 j+=1
             res.append(intervals[i]) 
