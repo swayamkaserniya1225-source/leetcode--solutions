@@ -8,7 +8,6 @@ class Solution:
             if element==num:
                 count+=1
             else:
-                if count>0:
-                    count-=1
+                count-=1
         return element            
         
