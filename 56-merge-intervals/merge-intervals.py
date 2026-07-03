@@ -9,7 +9,7 @@ class Solution:
                 merge_sort(right)
                 i=j=k=0
                 while i<len(left) and j<len(right):
-                    if left[i][0]<right[j][0]:
+                    if left[i][0]<=right[j][0]:
                         list1[k]=left[i]
                         i+=1
                     else:
@@ -34,5 +34,4 @@ class Solution:
                 j+=1
             res.append(intervals[i]) 
             i=j
-            i+1
         return res
