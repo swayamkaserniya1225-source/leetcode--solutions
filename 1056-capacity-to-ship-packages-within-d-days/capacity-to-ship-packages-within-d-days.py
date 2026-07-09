@@ -11,8 +11,6 @@ class Solution:
                 if load>mid:
                     day+=1
                     load=num
-                if day>days:
-                    break
             if day<=days:
                 right=mid-1
             else:
