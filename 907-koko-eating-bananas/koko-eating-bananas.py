@@ -9,6 +9,8 @@ class Solution:
                 total+=pile//mid
                 if pile%mid!=0:
                     total+=1
+                if total>h:
+                    break
             if total<=h:
                 right=mid-1 
             else:
