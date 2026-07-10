@@ -1,13 +1,12 @@
 class Solution:
     def minimumTime(self, time: List[int], totalTrips: int) -> int:
-        right=min(time)*totalTrips
         left=min(time)
+        right=left*totalTrips
         while left<=right:
             mid=left+(right-left)//2
             count=0
             for num in time:
-                if num<=mid:
-                    count+=mid//num
+                count+=mid//num
             if count>=totalTrips:
                 right=mid-1
             else:
