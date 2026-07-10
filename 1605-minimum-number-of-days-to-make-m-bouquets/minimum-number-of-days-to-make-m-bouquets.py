@@ -15,6 +15,8 @@ class Solution:
                     count=0
                 if count==k:
                     bouque+=1
+                    if bouque>=m:
+                        break
                     count=0
             if bouque<m:
                 left=mid+1
