@@ -8,4 +8,4 @@ class Solution:
             hashtable[index]+=1
             index1=ord((t[i]))-ord("a")
             hashtable[index1]-=1
-        return len(set(hashtable))==1
+        return hashtable==[0]*26
