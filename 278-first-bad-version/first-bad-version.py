@@ -2,7 +2,7 @@
 # def isBadVersion(version: int) -> bool:
 class Solution:
     def firstBadVersion(self, n: int) -> int:
-        left=0
+        left=1
         while left<=n:
             mid=left+(n-left)//2
             if isBadVersion(mid):
