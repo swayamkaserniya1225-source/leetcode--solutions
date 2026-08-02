@@ -1,3 +1,4 @@
+import heapq
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         def merge_sort(list1):
@@ -25,19 +26,17 @@ class Solution:
                     j+=1
                     k+=1
         merge_sort(trips)
-        prefix=0
-        dict1={}
-        for num,start,end in trips:
-            prefix=num
-            dict1[start]=dict1.get(start,0)+prefix
-            dict1[end]=dict1.get(end,0)-prefix
+        heap=[]
         current=0
-        for i in range(0,1000):
-            current+=dict1.get(i,0)
+        for num,start,end in trips:
+            while heap and heap[0][0]<=start:
+                x,y=heapq.heappop(heap)
+                current-=y
+            heapq.heappush(heap,(end,num))
+            current+=num
             if current>capacity:
                 return False
         return True
-
 
                 
 
