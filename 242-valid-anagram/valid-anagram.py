@@ -2,10 +2,11 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s)!=len(t):
             return False
-        hashtable=[0]*26
+        dict1={}
         for i in range(len(s)):
-            index=ord(s[i])-ord("a")
-            hashtable[index]+=1
-            index1=ord((t[i]))-ord("a")
-            hashtable[index1]-=1
-        return hashtable==[0]*26
+            dict1[s[i]]=dict1.get(s[i],0)+1
+            dict1[t[i]]=dict1.get(t[i],0)-1
+        for key,values in dict1.items():
+            if values!=0:
+                return False
+        return True
