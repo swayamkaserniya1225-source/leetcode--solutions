@@ -4,7 +4,7 @@ class Solution:
             return -1
         current_sum=0
         pos=0
-        for i in range(len(gas)):
+        for i in range(len(gas)-1):
             current_sum+=(gas[i]-cost[i])
             if current_sum<0:
                 pos=i+1
