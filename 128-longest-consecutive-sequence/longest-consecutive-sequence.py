@@ -10,7 +10,7 @@ class Solution:
                     count+=1
                     num+=1
                 max_dist=max(count,max_dist)
-            if max_dist>=len(nums1):
+            if max_dist>=len(nums1)/2:
                 return max_dist
         return max_dist
 
