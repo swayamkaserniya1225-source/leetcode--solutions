@@ -3,7 +3,9 @@ class Solution:
         for i in range(len(image)):
             left=0
             right=len(image)-1
-            while left<right:
+            while left<=right:
+                if left==right:
+                    image[i][left]=1-image[i][left]
                 if image[i][left]==0:
                     image[i][left]=1
                 else:
@@ -15,8 +17,7 @@ class Solution:
                 image[i][left],image[i][right]=image[i][right],image[i][left]
                 left+=1
                 right-=1
-            if left==right:
-                image[i][left]=1-image[i][left]
+            
         return image
 
                 
